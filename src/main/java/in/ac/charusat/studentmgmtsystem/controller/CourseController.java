@@ -12,6 +12,10 @@ import java.util.List;
 public class CourseController {
     @Autowired
     CourseRepository courseRepository;
+    @GetMapping("/")
+    public String displayWelcomeMessage(){
+        return "<h1>welcome</h1>";
+    }
 
     @GetMapping("/getCourseList")
     public List<Course> getAllCourse(){
